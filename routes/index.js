@@ -2,8 +2,13 @@ var express = require('express');
 var _ = require('lodash');
 var router = express.Router();
 const Sequelize = require('sequelize');
-const sequelize = new Sequelize('nba', 'postgres', 'postgres', {
-  host: 'localhost',
+var host = process.env.RDS_HOSTNAME;
+var user = process.env.RDS_USERNAME;
+var password = process.env.RDS_PASSWORD;
+var port = process.env.RDS_PORT;
+const sequelize = new Sequelize('nba', user, password, {
+  host: host,
+  port: port,
   dialect: 'postgres',
 
   pool: {
