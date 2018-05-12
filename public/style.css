@@ -1,0 +1,15 @@
+#playername,#teamname{
+  display:inline-block;
+}
+label{
+  color: white;
+  margin: 0 0 0 5px;
+}
+button{
+  margin-left:5px
+}
+
+#screenshot{
+  display:none;
+  margin:auto;
+}
